@@ -1,0 +1,171 @@
+/* Resetowanie stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Ciemne tło */
+    color: #f5f5f5;
+}
+
+header {
+    background-color: #1e1e1e; /* Bardzo ciemny szary */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #007acc; /* Niebieski akcent */
+}
+
+header .logo h1 {
+    color: #007acc; /* Niebieski kolor logo */
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #007acc; /* Niebieski kolor po najechaniu */
+}
+
+/* Hero sekcja z obrazem w tle */
+.hero {
+    background-image: url('images/background-hero.jpg'); /* Obrazek tła sekcji hero */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczysta warstwa dla lepszej widoczności tekstu */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ustawiamy tekst na wierzchu */
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #007acc; /* Niebieski kolor nagłówka */
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007acc; /* Niebieski przycisk */
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #005f99; /* Ciemniejszy niebieski przycisk po najechaniu */
+}
+
+/* Pozostałe sekcje */
+.features, .about, .content {
+    padding: 50px 20px;
+    background-color: #1e1e1e; /* Ciemne sekcje */
+    text-align: center;
+    border-bottom: 2px solid #007acc; /* Niebieskie oddzielające linie */
+}
+
+.features h2, .about h2, .content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #007acc; /* Niebieskie nagłówki sekcji */
+}
+
+.feature-box {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #292929; /* Trochę jaśniejsze tło boxów */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box h3 {
+    font-size: 24px;
+    color: #007acc; /* Niebieski tytuł boxu */
+}
+
+.feature-box p {
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #007acc; /* Niebieski akcent na górze stopki */
+}
+
+footer p {
+    color: #888;
+}
+
+/* Style do sekcji regulaminu */
+.content ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.content ol {
+    list-style-type: decimal;
+    padding-left: 40px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.content li {
+    margin: 10px 0;
+    color: #f5f5f5;
+}
+
+.content a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
